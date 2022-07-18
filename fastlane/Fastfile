@@ -37,10 +37,23 @@ platform :ios do
     sync_code_signing(
     type: "appstore",  # match
     app_identifier: "com.hiteshi.CustomExpandingView",
-    username:'Manoj Mirchandani',
+    username:'manoj.mirchandani@gmail.com',
     team_id:'T4Q3XEB88Y',
     team_name:'Manoj Mirchandani',
-    git_url:''
+    git_url:'https://github.com/harshHiteshi/CustomExpandingView.git'
     )
+    mapping = lane_context[
+      SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING
+    ]
+     update_code_signing_settings(
+      profile_name: mapping['com.hiteshi.CustomExpandingView'],
+      use_automatic_signing: false,
+      path: "/Users/neeleshwarimehra/Downloads/GitProject/CustomExpandingView1/CustomExpandingView/CustomExpandingView.xcodeproj",
+      team_id: "T4Q3XEB88Y",
+      bundle_identifier: "com.hiteshi.CustomExpandingView",
+      code_sign_identity:"Apple Distribution",
+      build_configurations:"Release"
+     )
 end
 end
+
