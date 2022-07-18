@@ -54,6 +54,25 @@ platform :ios do
       code_sign_identity:"Apple Distribution",
       build_configurations:"Release"
      )
-end
+   end
+
+    desc "Build binary"
+    lane :build do
+     build_ios_app #gym
+   end 
+
+   desc "Release app to appstore"
+   lane :release do
+    build
+    # deliver
+    upload_to_app_store(
+    app_identifier:'com.hiteshi.CustomExpandingView',
+    team_name:'Manoj Mirchandani',
+    dev_portal_team_name:'Manoj Mirchandani',
+    run_precheck_before_submit:false,
+    skip_screenshots:true,
+    skip_metadata:true
+   ) 
+   end
 end
 

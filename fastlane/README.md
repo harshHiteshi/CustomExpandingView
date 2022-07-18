@@ -31,6 +31,22 @@ Create App On appstoreconnect
 
 Sync singing Certificate
 
+### ios build
+
+```sh
+[bundle exec] fastlane ios build
+```
+
+Build binary
+
+### ios release
+
+```sh
+[bundle exec] fastlane ios release
+```
+
+Release app to appstore
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
