@@ -5,17 +5,17 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000562">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000625">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: sync_code_signing" time="7.453053">
+      <testcase classname="fastlane.lanes" name="1: sync_code_signing" time="12.100286">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: update_code_signing_settings" time="0.160012">
+      <testcase classname="fastlane.lanes" name="2: update_code_signing_settings" time="0.163841">
         
       </testcase>
     
