@@ -46,9 +46,9 @@ platform :ios do
       SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING
     ]
      update_code_signing_settings(
-      profile_name: mapping['com.hiteshi.CustomExpandingView'],
+      profile_name: 'com.hiteshi.CustomExpandingView',
       use_automatic_signing: false,
-      path: "/Users/neeleshwarimehra/Downloads/GitProject/CustomExpandingView1/CustomExpandingView/CustomExpandingView.xcodeproj",
+      path: "/Users/neeleshwarimehra/Downloads/GitProject/CustomExpandingView1/CustomExpandingView/CustomExpandingView.xcworkspace",
       team_id: "T4Q3XEB88Y",
       bundle_identifier: "com.hiteshi.CustomExpandingView",
       code_sign_identity:"Apple Distribution",
