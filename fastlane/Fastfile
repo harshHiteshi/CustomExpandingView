@@ -1,0 +1,46 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+
+
+platform :ios do
+
+  desc "Create App On appstoreconnect"
+  lane :create_app do
+    create_app_online(
+      username: 'manoj.mirchandani@gmail.com',
+      app_identifier: 'com.hiteshi.CustomExpandingView',
+      app_name: 'CustomExpandingView',
+      language: 'English',
+      app_version: '1.0',
+      sku: '123',
+      team_name: 'Manoj Mirchandani'
+    )
+  end
+
+  desc "Sync singing Certificate"
+  lane :signing do
+    sync_code_signing(
+    type: "appstore",  # match
+    app_identifier: "com.hiteshi.CustomExpandingView",
+    username:'Manoj Mirchandani',
+    team_id:'T4Q3XEB88Y',
+    team_name:'Manoj Mirchandani',
+    git_url:''
+    )
+end
+end
